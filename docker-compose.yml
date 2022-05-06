@@ -1,0 +1,8 @@
+services:
+  db:
+    image: mariadb
+    container_name: mysql-maraidb
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3306:3306"
