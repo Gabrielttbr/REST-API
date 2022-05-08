@@ -3,6 +3,7 @@ const morgan = require('morgan');
 const bodyParser = require('body-parser')
 const routerProdutos = require('./router/Produtos');
 const routerPedidos = require('./router/Pedidos');
+const routerUsuario = require('./router/Usuario')
 const app = express();
 
 
@@ -43,11 +44,13 @@ app.use((req, res, next) => {
 
 
 // ROTAS PRODUTOS
-app.use('/produtos', routerProdutos);
+app.use('/Produto', routerProdutos);
 
 // ROTA PEDIDO
-app.use('/pedidos', routerPedidos);
+app.use('/Pedido', routerPedidos);
 
+//ROTA USUARIO
+app.use('/Usuario', routerUsuario)
 
 // =================================================================================================
 //                                    CASO NÃO EXISTIR ROTA

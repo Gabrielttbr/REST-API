@@ -3,4 +3,4 @@ const app = require('./app');
 const port = process.env.PORT || 3000;
 const serve = http.createServer(app)
 
-serve.listen(port)
+serve.listen(port, ()=> { console.log("Funcional")})
